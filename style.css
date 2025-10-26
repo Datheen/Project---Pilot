@@ -578,4 +578,11 @@ p {
     .social-icons {
         justify-content: center;
     }
+    .botao-contato {
+        display: none;
+    }
+    #span-logo {
+        display: flex;
+        margin-left: 180px;
+    }
 }
