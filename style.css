@@ -61,6 +61,7 @@ img {
 }
 #hero-subtitle {
     color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 /* Typography */
@@ -270,6 +271,7 @@ p {
 }
 #hero-title {
     color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .hero::after {
@@ -483,6 +485,10 @@ p {
 .footer-bottom p {
     opacity: 0.6;
 }
+#mobile {
+    display: none;
+    
+}
 
 /* Responsive Styles */
 @media (max-width: 992px) {
@@ -497,6 +503,8 @@ p {
     .hero {
         padding: 7rem 0 4rem;
     }
+    #mobile {
+        display: flexbox;
 }
 
 @media (max-width: 768px) {
@@ -552,6 +560,7 @@ p {
     .product-grid, .benefits-grid {
         grid-template-columns: 1fr;
     }
+   
 }
 
 @media (max-width: 576px) {
@@ -583,6 +592,10 @@ p {
     }
     #span-logo {
         display: flex;
-        margin-left: 180px;
+        margin-left: 150px;
     }
+    #mobile {
+        display: flex;
+}
+
 }
