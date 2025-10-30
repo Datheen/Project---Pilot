@@ -609,9 +609,24 @@ p {
     .botao-contato {
         display: none;
     }
+    .logo {
+        width: 100%;
+        text-align: center;
+    }
     #span-logo {
-        display: flex;
-        margin-left: 150px;
+        display: inline-block;
+        margin: 0 auto;
+        text-align: center;
+    }
+    /* Preserve hamburger position on the right while logo is centered */
+    .header .container {
+        position: relative;
+    }
+    .mobile-toggle {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
     }
     #mobile {
         display: flex;
