@@ -83,4 +83,30 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialize active nav item on page load
     highlightNavItem();
+
+    // Relocate tech icons for mobile: move from hero to above Projects title
+    function relocateTechIcons() {
+        const techIcons = document.querySelector('.hero-tech-icons');
+        const heroContainer = document.querySelector('.hero .container');
+        const projectsContainer = document.querySelector('#projects .container');
+        const projectsTitle = document.querySelector('#projects .section-title');
+        if (!techIcons || !heroContainer || !projectsContainer || !projectsTitle) return;
+
+        if (window.innerWidth <= 576) {
+            if (projectsTitle.previousElementSibling !== techIcons) {
+                projectsContainer.insertBefore(techIcons, projectsTitle);
+            }
+        } else {
+            if (!heroContainer.contains(techIcons)) {
+                heroContainer.appendChild(techIcons);
+            }
+        }
+    }
+
+    relocateTechIcons();
+    let resizeTimeout;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(relocateTechIcons, 150);
+    });
 });
